@@ -1,13 +1,7 @@
-package main
+package comparetriplets
 
-import "fmt"
-
-func main() {
+func comparetriplets(a []int32, b []int32) [2]int32 {
 	var points [2]int32
-	a := [3]int32{5, 6, 7}
-	b := [3]int32{3, 6, 10}
-	fmt.Println("a:", a)
-	fmt.Println("b:", b)
 
 	for i := 0; i < len(a); i++ {
 		if a[i] > b[i] {
@@ -16,5 +10,6 @@ func main() {
 			points[1] = points[1] + 1
 		}
 	}
-	fmt.Println("Points:", points)
+
+	return points
 }
